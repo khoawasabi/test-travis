@@ -6,7 +6,7 @@ class SumTest extends PHPUnit_Framework_TestCase {
 	*/
 	public function testSum()
 	{
-		$this->assertEquals(3, Sum::getSum(1,2);
+		$this->assertEquals(3, Sum::getSum(1,2));
 	}
 }
 ?>
