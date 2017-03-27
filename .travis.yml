@@ -1,5 +1,5 @@
 before_install:
-- composer require phpunit/phpunit:5.7.* satooshi/php-coveralls:dev-master
+- composer require phpunit/phpunit satooshi/php-coveralls:dev-master
 - composer install --dev
  
 script:
