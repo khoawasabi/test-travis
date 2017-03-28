@@ -8,3 +8,6 @@ Now changed a little bit.
 created a branch called khoa and set --upstream orgin khoa, it triggered the travis on branch khoa, but the text on README.md automatically reverted back. Now checkout back to master and test if this README.md file can be updated to repository.
 ------------------------------------------
 now change a bit
+------------------------
+changed this
+-----------------------
