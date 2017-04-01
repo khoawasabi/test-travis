@@ -1,6 +1,4 @@
 language: php
-<<<<<<< HEAD
-sudo: false
   php:
     - '5.6'
     - hhvm
