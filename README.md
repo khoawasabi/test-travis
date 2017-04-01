@@ -11,4 +11,8 @@ now somemore changes
 ----------------
 some more changes
 .....................
+<<<<<<< HEAD
 some more changessssssssssssssss
+=======
+somemore changed
+>>>>>>> e9f12cb19ec078ddda26442521a72585915d8fd5
