@@ -1,8 +1,8 @@
 <?php
 
 class Sum {
-	public static function getSum($number_1, $number_2)
+	public static function getSum($number1, $number2)
 	{
-		return $number_1 + $number_2;
+		return $number1 + $number2;
 	}
 }
