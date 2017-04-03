@@ -5,5 +5,7 @@ sudo: false
 matrix:
   include:
     - php: 5.6
-   
+      env: WITH_HIGHEST=true WITH_COVERAGE=true
 script: phpunit --bootstrap Sources/Sum.php Tests/SumTest.php
+after_success:
+  - if [[ "$WITH_COVERAGE" == "true" ]]; then php composer/bin/test-reporter; fi
