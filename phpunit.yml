@@ -9,7 +9,7 @@
         convertWarningsToExceptions="true"
         processIsolation="false"
         stopOnFailure="false"
-        bootstrap="Test/bootstrap.php">
+        bootstrap="vendor/autoload.php">
     <testsuites>
         <testsuite name="test how travis work with codeclimate that you PHPUnit">
             <directory suffix="Test.php">./Tests/Sum</directory>
