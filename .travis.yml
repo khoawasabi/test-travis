@@ -1,20 +1,12 @@
 language: php
 
-sudo: false
+php:
+  - '5.6'
+  - hhvm
+  - nightly
 
-matrix:
-  include:
-    - php: 5.6
-      env: WITH_HIGHEST=true WITH_COVERAGE=true
-script: phpunit --bootstrap Sources/Sum.php Tests/SumTest.php
-after_success:
-  - if [[ "$WITH_COVERAGE" == "true" ]]; then php composer/bin/test-reporter; fi
-deploy:
-  provider: releases
-  api_key: $GITHUB_API_KEY
-  file: build/codeclimate-test-reporter.phar
-  skip_cleanup: true
-  on:
-    tags: true
-    php: 5.3
-    condition: "$WITH_HIGHEST == true && $WITH_PHAR == true"
+before_script:
+  - composer install --dev --no-interaction
+
+script:
+  - vendor/bin/phpunit Sources/Sum.php Tests/SumTest.php
