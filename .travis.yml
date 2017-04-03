@@ -9,4 +9,8 @@ before_script:
   - composer install --dev --no-interaction
 
 script:
-  - vendor/bin/phpunit Sources/Sum.php Tests/SumTest.php
+  - mkdir -p build/logs
+  - vendor/bin/phpunit --bootstrap Sources/Sum.php Tests/SumTest.php --coverage-clover build/logs/clover.xml
+addons:
+  code_climate:
+    repo_token:   83bff3852509a7b18bf64e4904c9ae5f1278cbb01349283730e4aed3133317a4s
