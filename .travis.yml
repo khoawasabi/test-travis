@@ -10,5 +10,5 @@ before_script:
 
 script:
   - mkdir -p build/logs
-  - vendor/bin/phpunit --bootstrap src/Sum.php tests/
+  - vendor/bin/phpunit --bootstrap src/Sum.php tests/SumTest.php
 after_script: ./codeclimate.sh
