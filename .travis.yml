@@ -10,7 +10,8 @@ before_script:
 
 script:
   - mkdir -p build/logs
-  - vendor/bin/phpunit --bootstrap src/Sum.php tests/SumTest.php
+  - vendor/bin/phpunit --bootstrap src/Sum.php tests/SumTest.php --coverage-clover ./build/logs/clover.xml
+
 after_script:
   - vendor/bin/test-reporter --stdout > codeclimate.json
   - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
