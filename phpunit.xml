@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
+<phpunit bootstrap="./tests/bootstrap.php"
     
-         color="true"
+         colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true">
-
 
     <testsuites>
         <testsuite name="test how travis work with codeclimate that you PHPUnit">
@@ -22,6 +21,4 @@
             <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
-
-    
 </phpunit>
