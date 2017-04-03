@@ -11,7 +11,4 @@ before_script:
 script:
   - mkdir -p build/logs
   - vendor/bin/phpunit --bootstrap src/Sum.php tests/ --coverage-clover build/logs/clover.xml
-after_script: ./codeclimate.sh 
-addons:
-  code_climate:
-    repo_token:   83bff3852509a7b18bf64e4904c9ae5f1278cbb01349283730e4aed3133317a4
+after_script: ./codeclimate.sh
