@@ -9,7 +9,7 @@ before_script:
 
 script:
   - mkdir -p build/logs
-  - vendor/bin/phpunit --bootstrap Sources/Sum.php Tests/ --coverage-clover build/logs/clover.xml
+  - vendor/bin/phpunit --bootstrap src/Sum.php tests/ --coverage-clover build/logs/clover.xml
 after_script: ./codeclimate.sh 
 addons:
   code_climate:
