@@ -14,10 +14,7 @@
 
     <testsuites>
         <testsuite name="test how travis work with codeclimate that you PHPUnit">
-            <directory suffix="Test.php">./Tests/Sum</directory>
-        </testsuite>
-        <testsuite name="Tests Data">
-            <directory suffix="Test.php">./Tests/DataCheck</directory>
+            <directory suffix=".php">Tests/</directory>
         </testsuite>
     </testsuites>
 
