@@ -13,5 +13,6 @@ script:
   - mkdir -p build/logs
   - vendor/bin/phpunit --bootstrap src/Sum.php Tests/SumTest.php
 after_script:
-  - CODECLIMATE_REPO_TOKEN="83bff3852509a7b18bf64e4904c9ae5f1278cbb01349283730e4aed3133317a4" vendor/bin/test-reporter --stdout > codeclimate.json
+  - CODECLIMATE_REPO_TOKEN="83bff3852509a7b18bf64e4904c9ae5f1278cbb01349283730e4aed3133317a4" 
+    vendor/bin/test-reporter --stdout > codeclimate.json
   - "curl -X POST -d @codeclimate.json -H 'Content-Type: application/json' -H 'User-Agent: Code Climate (PHP Test Reporter v0.1.1)' https://codeclimate.com/test_reports"
